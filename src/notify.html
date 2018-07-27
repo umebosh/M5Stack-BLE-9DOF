@@ -35,9 +35,9 @@ Copyright 2017 JellyWare Inc. All Rights Reserved.
             var APP = {};
 
             APP.animate = function () {
-                APP.cube.rotation.x = kui_rotation_x;
-                APP.cube.rotation.y = kui_rotation_y;
-                APP.cube.rotation.z = kui_rotation_z;
+                APP.cube.rotation.x = -(kui_rotation_y)*Math.PI/180;
+                APP.cube.rotation.y = (kui_rotation_z)*Math.PI/180;
+                APP.cube.rotation.z = (kui_rotation_x-180)*Math.PI/180;
                 APP.renderer.render(APP.scene, APP.camera);
                 window.requestAnimationFrame(APP.animate);
             }
@@ -75,11 +75,11 @@ Copyright 2017 JellyWare Inc. All Rights Reserved.
         <hr>
         <div id="device_name"></div>
         <div id="uuid_name"></div>
-        pitch =
+        X =
         <div id="data_text_pit"></div>
-        roll =
+        Y =
         <div id="data_text_rol"></div>
-        yaw =
+        Z =
         <div id="data_text_yaw"></div>
         <div id="status"></div>
 
